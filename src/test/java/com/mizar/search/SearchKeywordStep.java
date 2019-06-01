@@ -15,12 +15,12 @@ public class SearchKeywordStep {
 
   @Given("the system is available")
   public void the_system_is_available() {
-    given().when().get("http://www.google.com").then().statusCode(200);
+    get("http://www.google.com").then().statusCode(200);
   }
 
   @When("the user searches for the word {string}")
   public void the_user_searches_for_the_word_something(String keyword) {
-    response = given().when().get("http://www.google.com/search?q=" + keyword);
+    response = get("http://www.google.com/search?q=" + keyword);
   }
 
   @Then("the results page should mention {string}")
