@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = {"html:target/searchKeyword-report"})
+@CucumberOptions(plugin = "html:target/searchKeyword-report")
 public class SearchKeywordTest {
 
 }
